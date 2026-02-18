@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Show Text Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <h1>Show Text Below</h1>
+
+  <textarea id="myText" rows="4" cols="40" placeholder="Type something here..."></textarea>
+  <br />
+  <button id="showBtn" type="button">Show Text</button>
+
+  <p id="result"></p>
+
+  <script>
+    const textArea = document.getElementById('myText');
+    const button = document.getElementById('showBtn');
+    const result = document.getElementById('result');
+
+    button.addEventListener('click', () => {
+      result.textContent = textArea.value;
+    });
+  </script>
+</body>
+</html>
